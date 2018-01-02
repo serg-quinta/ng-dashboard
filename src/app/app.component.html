@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (customEvent)="countQuantity($event)" (sideNavToggle)="sidenav.toggle()"></app-header>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened="true">
     <mat-toolbar color="primary" class="sidenavToolbar">
@@ -20,6 +20,7 @@
     <div>
       <button mat-icon-button (click)="sidenav.toggle()"><mat-icon svgIcon="menu"></mat-icon></button>
     </div>
+    <div>Logo clicks: {{ quantity }}</div>
     <mat-card>
       <mat-card-header>
         <div mat-card-avatar></div>

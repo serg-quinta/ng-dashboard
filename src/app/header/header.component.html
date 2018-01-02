@@ -1,3 +1,8 @@
 <mat-toolbar color="primary">
-  {{ title }}
+  <div>
+    <button mat-icon-button (click)="sideNav()"><mat-icon svgIcon="menu"></mat-icon></button>
+  </div>
+  <img class="dbLogo" [src]="safeLogo" [alt]="description"
+   (click)="onLogoClick()">
+  <span class="dbTitle">{{ title }}</span>
 </mat-toolbar>
