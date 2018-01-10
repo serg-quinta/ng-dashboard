@@ -14,7 +14,6 @@ const data: Card[] = [
   {
     'avatar': '/assets/img/shiba1.jpg',
     'title': 'Card2 Title',
-    'subtitle': 'Card2 Subtitle',
     'img': '/assets/img/cards.jpg',
     'content': 'Card2 content'
   },

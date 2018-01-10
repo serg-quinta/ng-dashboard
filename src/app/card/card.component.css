@@ -1,0 +1,11 @@
+app-card {
+  display: block;
+  height: 100%;
+}
+.mat-card {
+  height: 100%;
+}
+.mat-card-avatar {
+  margin-bottom: 16px;
+  object-fit: cover;
+}

@@ -9,21 +9,27 @@
   height: 100%;
 }
 
-.mat-card {
-  box-sizing: border-box;
-  margin: 20px;
+/* Grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.grid__item {
+  margin: 10px;
 }
 @media (min-width: 768px) {
-  .mat-card {
-    max-width: calc(50% - 40px);
+  .grid__item {
+    max-width: calc(50% - 20px);
   }
 }
 @media (min-width: 1024px) {
-  .mat-card {
-    max-width: calc(33.33% - 40px);
+  .grid__item {
+    max-width: calc(33.33% - 20px);
   }
 }
-.mat-card-avatar {
-  background-image: url('/assets/img/shiba1.jpg');
-  background-size: cover;
+
+/* Loader */
+.loader {
+  margin: 10px;
 }

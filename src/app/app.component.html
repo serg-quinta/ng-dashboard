@@ -17,41 +17,22 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <div>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon svgIcon="menu"></mat-icon>
-      </button>
-    </div>
-    <div>Logo clicks: {{ quantity }}</div>
 
-    <div *ngIf="cards$ | async as cards; else load">
-      <mat-card *ngFor="let card of cards">
-        <pre>{{ card | json }}</pre>
-      </mat-card>
+    <div *ngIf="cards$ | async as cards; else load"
+          class="grid">
+      <div *ngFor="let card of cards; index as i; odd as isOdd"
+            class="grid__item">
+        <app-card [card]="card" [position]="i+1" [isOdd]="isOdd">
+          
+        </app-card>
+      </div>
     </div>
 
     <ng-template #load>
-      <mat-card>
+      <div class="loader">
         <img src="assets/img/gears.gif" alt="Loading...">
-      </mat-card>
+      </div>
     </ng-template>
 
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar></div>
-        <mat-card-title>Cards</mat-card-title>
-        <mat-card-subtitle>Wall of cards</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="/assets/img/cards.jpg" alt="Cards">
-      <mat-card-content>
-        <p>
-          Cards
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
   </mat-sidenav-content>
 </mat-sidenav-container>
