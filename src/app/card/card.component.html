@@ -1,4 +1,4 @@
-<mat-card [ngClass]="{odd: isOdd}">
+<mat-card [ngClass]="{'mat-card--odd': isOdd}">
   <mat-card-header>
     <div class="card__position">{{ position }}</div>
     <img mat-card-avatar src="{{ card?.avatar }}" alt="Card Avatar">

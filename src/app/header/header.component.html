@@ -1,10 +1,11 @@
 <mat-toolbar color="primary">
   <div>
     <button mat-icon-button (click)="sideNav()">
-      <mat-icon svgIcon="menu" class="dbToggleMenu"></mat-icon>
+      <mat-icon svgIcon="menu" class="dbhToggleMenu"></mat-icon>
     </button>
   </div>
-  <img class="dbLogo" [src]="safeLogo" [alt]="description"
-      (click)="onLogoClick()">
-  <span class="dbTitle">{{ title }}</span>
+  <img class="dbhLogo" [src]="safeLogo" [alt]="description">
+  <span>{{ title }}</span>
+  <!-- TODO: fix ExpressionChangedAfterItHasBeenCheckedError -->
+  <span class="dbhNotice" *ngIf="notice">First card is: {{ notice }}</span>
 </mat-toolbar>

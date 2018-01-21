@@ -12,8 +12,8 @@ import { cards$ } from './data';
 })
 export class AppComponent implements OnInit {
 
-  public quantity: number = 0;
   public cards$: Observable<Card[]>;
+  public firstCardTitle: string;
 
   public constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
     this.cards$ = cards$;
   }
 
-  public countQuantity(): number {
-    return this.quantity++;
+  public chooseFirst(card: Card): void {
+    this.firstCardTitle = card.title;
   }
 
 }

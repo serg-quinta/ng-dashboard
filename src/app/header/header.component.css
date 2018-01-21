@@ -1,6 +1,9 @@
-.dbLogo {
+.dbhLogo {
   height: 90%;
 }
-.dbToggleMenu {
+.dbhToggleMenu {
   color: #fff;
+}
+.dbhNotice {
+  margin: 0 10px;
 }

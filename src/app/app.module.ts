@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { FirstDirective } from './common/directives/first.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     AppComponent,
     HeaderComponent,
     CardComponent,
-    SidenavComponent
+    SidenavComponent,
+    FirstDirective
   ],
   imports: [
     BrowserAnimationsModule,
