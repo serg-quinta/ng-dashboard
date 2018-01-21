@@ -7,6 +7,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatIconModule,
+  MatInputModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -15,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FirstDirective } from './common/directives/first.directive';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,15 +26,18 @@ import { FirstDirective } from './common/directives/first.directive';
     HeaderComponent,
     CardComponent,
     SidenavComponent,
-    FirstDirective
+    FirstDirective,
+    SearchComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    MatInputModule,
     MatSidenavModule,
     MatToolbarModule
   ],

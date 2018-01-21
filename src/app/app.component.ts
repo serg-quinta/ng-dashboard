@@ -18,7 +18,10 @@ export class AppComponent implements OnInit {
   public constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
         'menu',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/img/menu.svg'));
+        sanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu.svg'));
+    iconRegistry.addSvgIcon(
+        'close',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/icons/close.svg'));
   }
 
   public ngOnInit(): void {

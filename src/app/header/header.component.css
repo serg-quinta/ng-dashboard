@@ -7,3 +7,6 @@
 .dbhNotice {
   margin: 0 10px;
 }
+.dbhSpacer {
+  flex-grow: 1;
+}
