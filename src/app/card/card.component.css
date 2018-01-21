@@ -9,3 +9,14 @@ app-card {
   margin-bottom: 16px;
   object-fit: cover;
 }
+.card__position {
+  background-color: #3f51b5;
+  color: #fff;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  width: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

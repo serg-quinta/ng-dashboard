@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
   <div>
     <button mat-icon-button (click)="sideNav()">
-      <mat-icon svgIcon="menu" class="dbToggleMenu"></mat-icon></button></div>
+      <mat-icon svgIcon="menu" class="dbToggleMenu"></mat-icon>
+    </button>
+  </div>
   <img class="dbLogo" [src]="safeLogo" [alt]="description"
       (click)="onLogoClick()">
   <span class="dbTitle">{{ title }}</span>
