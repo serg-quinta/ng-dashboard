@@ -1,19 +1,7 @@
 <app-header (customEvent)="countQuantity($event)" (sideNavToggle)="sidenav.toggle()"></app-header>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened="true">
-    <mat-toolbar color="primary" class="sidenavToolbar">
-        <mat-toolbar-row>
-          <span>Cards</span>
-        </mat-toolbar-row>
-      
-        <mat-toolbar-row>
-          <span>Forms</span>
-        </mat-toolbar-row>
-      
-        <mat-toolbar-row>
-          <span>Sidenav Item</span>
-        </mat-toolbar-row>
-      </mat-toolbar>
+    <app-sidenav></app-sidenav>
   </mat-sidenav>
 
   <mat-sidenav-content>

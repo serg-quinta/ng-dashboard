@@ -13,13 +13,15 @@ import {
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserAnimationsModule,
