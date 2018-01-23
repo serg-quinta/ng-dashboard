@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser/';
 
 @Component({
@@ -6,9 +6,10 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser/';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   public title: string = 'NG Dashboard';
+  public text: string;
   public safeLogo: SafeUrl;
   public description: string = 'NG Dashboard logo';
 
@@ -17,6 +18,9 @@ export class HeaderComponent implements OnInit {
 
   @Output()
   public sideNavToggle: EventEmitter<string> = new EventEmitter();
+
+  @Output()
+  public headerSearchResult: EventEmitter<string> = new EventEmitter();
 
   private _logo: string =
     // tslint:disable-next-line
@@ -28,11 +32,13 @@ export class HeaderComponent implements OnInit {
     this.safeLogo = this._sanitizer.bypassSecurityTrustUrl(this._logo);
   }
 
-  public ngOnInit(): void {
-  }
-
   public sideNav(): void {
     this.sideNavToggle.emit();
+  }
+
+  public showText(value: string): void {
+    this.text = value;
+    this.headerSearchResult.emit(value);
   }
 
 }

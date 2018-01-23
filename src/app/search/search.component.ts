@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { StateKey } from '@angular/platform-browser/src/browser/transfer_state';
 
 @Component({
@@ -8,6 +8,11 @@ import { StateKey } from '@angular/platform-browser/src/browser/transfer_state';
 })
 export class SearchComponent {
 
-  public value: string = 'Clear me';
+  @Output()
+  public searchResult: EventEmitter<string> = new EventEmitter();
+
+  public search(value: string): void {
+    this.searchResult.emit(value);
+  }
 
 }

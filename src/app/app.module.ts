@@ -18,6 +18,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { FirstDirective } from './common/directives/first.directive';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './common/pipes/filter.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     CardComponent,
     SidenavComponent,
     FirstDirective,
-    SearchComponent
+    SearchComponent,
+    FilterPipe
   ],
   imports: [
     BrowserAnimationsModule,

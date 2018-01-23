@@ -1,4 +1,4 @@
-<app-header (sideNavToggle)="sidenav.toggle()" [notice]="firstCardTitle"></app-header>
+<app-header (sideNavToggle)="sidenav.toggle()" (headerSearchResult)="searchTerm=$event" [notice]="firstCardTitle"></app-header>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened="true">
     <app-sidenav></app-sidenav>
@@ -6,8 +6,10 @@
 
   <mat-sidenav-content>
 
+    <div>{{ searchTearm }}</div>
+
     <div *ngIf="cards$ | async as cards; else load" class="grid">
-      <div *ngFor="let card of cards; first as f; index as i; odd as isOdd" 
+      <div *ngFor="let card of cards | filter:searchTerm; first as f; index as i; odd as isOdd" 
             class="grid__item" 
             appFirst [card]="card" [first]="f" (chooseFirst)="chooseFirst($event)">
         <app-card [card]="card" [position]="i+1" [isOdd]="isOdd"></app-card>
