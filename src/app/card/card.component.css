@@ -11,7 +11,8 @@ app-card {
 }
 .mat-card-title-group {
   display: block;
-  width: calc(100% - 56px);
+  margin: 0 0 0 -8px;
+  width: calc(100% - 48px);
 }
 .mat-card-title,
 .mat-card-subtitle {
@@ -22,10 +23,10 @@ app-card {
 .card__position {
   background-color: #3f51b5;
   color: #fff;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  width: 26px;
+  width: 24px;
   position: absolute;
   top: 0;
   left: 0;
