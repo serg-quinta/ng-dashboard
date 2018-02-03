@@ -9,6 +9,16 @@ app-card {
   margin-bottom: 16px;
   object-fit: cover;
 }
+.mat-card-title-group {
+  display: block;
+  width: calc(100% - 56px);
+}
+.mat-card-title,
+.mat-card-subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .card__position {
   background-color: #3f51b5;
   color: #fff;

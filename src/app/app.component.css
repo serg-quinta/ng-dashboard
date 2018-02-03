@@ -13,6 +13,7 @@
   padding: 10px;
 }
 .grid__item {
+  flex-grow: 1;
   margin: 10px;
 }
 @media (min-width: 768px) {
