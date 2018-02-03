@@ -10,9 +10,9 @@
 
     <div *ngIf="cards$ | async as cards; else load" class="grid">
       <div *ngFor="let card of cards | filter:searchTerm; first as f; index as i; odd as isOdd" 
-            class="grid__item" 
-            appFirst [card]="card" [first]="f" (chooseFirst)="chooseFirst($event)">
-        <app-card [card]="card" [position]="i+1" [isOdd]="isOdd"></app-card>
+            class="grid__item">
+        <app-card [card]="card" [position]="i+1" [isOdd]="isOdd" 
+                  appFirst [first]="f" (chooseFirst)="chooseFirst($event)"></app-card>
       </div>
     </div>
 

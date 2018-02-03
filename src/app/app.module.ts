@@ -16,7 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FirstDirective } from './common/directives/first.directive';
-import { SearchComponent } from './search/search.component';
+import { SearchComponent } from './header/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './common/pipes/filter.pipe';
 

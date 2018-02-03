@@ -12,7 +12,6 @@ import { cards$ } from './data';
 })
 export class AppComponent implements OnInit {
 
-  public text: string = '2';
   public cards$: Observable<Card[]>;
   public firstCardTitle: string;
 
