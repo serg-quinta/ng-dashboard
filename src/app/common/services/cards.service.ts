@@ -1,5 +1,5 @@
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-// import { delay } from 'rxjs/operators';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/delay';
 
@@ -26,6 +26,11 @@ const data: Card[] = [
   }
 ];
 
-export const cards$: Observable<Card[]> =
-  Observable.of(data)
-    .delay(2000);
+@Injectable()
+export class CardsService {
+
+  public get cards$(): Observable<Card[]> {
+    return Observable.of(data)
+            .delay(2000);
+  }
+}

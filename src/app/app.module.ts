@@ -19,6 +19,7 @@ import { FirstDirective } from './common/directives/first.directive';
 import { SearchComponent } from './header/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './common/pipes/filter.pipe';
+import { CardsService } from './common/services/cards.service';
 
 
 @NgModule({
@@ -43,7 +44,9 @@ import { FilterPipe } from './common/pipes/filter.pipe';
     MatSidenavModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [
+    CardsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
