@@ -12,8 +12,6 @@
   <!-- TODO: fix ExpressionChangedAfterItHasBeenCheckedError -->
   <span class="dbhNotice" *ngIf="notice">First card is: {{ notice }}</span>
 
-  <span *ngIf="text" style="background: #e53935; padding: 10px;">{{ text }}</span>
-
   <span class="dbhSpacer"></span>
 
   <app-search class="dbhSearch" (searchResult)="showText($event)"></app-search>
