@@ -20,6 +20,7 @@ import { SearchComponent } from './header/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './common/pipes/filter.pipe';
 import { CardsService } from './common/services/cards.service';
+import { BASE_URL, BASE_URL_TOKEN } from './config';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CardsService } from './common/services/cards.service';
     MatToolbarModule
   ],
   providers: [
-    CardsService
+    CardsService,
+    {provide: BASE_URL_TOKEN, useValue: BASE_URL}
   ],
   bootstrap: [AppComponent]
 })

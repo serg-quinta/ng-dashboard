@@ -1,5 +1,6 @@
 type Env = {
   production: boolean,
+  baseUrl: string
 };
 
 type Card = {

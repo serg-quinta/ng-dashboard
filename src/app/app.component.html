@@ -1,4 +1,6 @@
-<app-header (sideNavToggle)="sidenav.toggle()" (headerSearchResult)="searchTerm=$event" [notice]="firstCardTitle"></app-header>
+<app-header (sideNavToggle)="sidenav.toggle()"
+            (headerSearchResult)="searchTerm=$event"
+            [notice]="firstCardTitle"></app-header>
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" opened="true">
     <app-sidenav></app-sidenav>

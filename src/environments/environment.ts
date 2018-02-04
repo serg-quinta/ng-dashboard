@@ -4,5 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment: Env = {
-  production: false
+  production: false,
+  baseUrl: 'https://raw.githubusercontent.com/serg-quinta/dump/master/cards2.json'
 };
